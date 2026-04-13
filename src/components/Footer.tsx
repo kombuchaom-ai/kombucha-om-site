@@ -23,10 +23,10 @@ export default function Footer() {
               Feito com amor nas montanhas de Minas Gerais para todo o Brasil.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <a href="#" className="text-white/70 hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/kombuchaomoficial/" target="_blank" rel="noreferrer" className="text-white/70 hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white/70 hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/kombuchaom/" target="_blank" rel="noreferrer" className="text-white/70 hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -38,11 +38,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>
-                    <a className="text-white/70 hover:text-white transition-colors text-sm">
-                      {link.label}
-                    </a>
-                  </Link>
+                  <a href={link.href} className="text-white/70 hover:text-white transition-colors text-sm">
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>

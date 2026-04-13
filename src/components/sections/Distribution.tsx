@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { MapPin, Truck, Store } from "lucide-react";
+import { MapPin, Truck, Users } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/constants";
 
 export default function Distribution() {
@@ -15,7 +15,7 @@ export default function Distribution() {
             Enviamos para todo o Brasil
           </h2>
           <p className="text-xl text-white/70">
-            De Minas Gerais para a sua casa, em qualquer lugar do país. Nossa kombucha viaja com todo cuidado para chegar fresquinha até você.
+            De Minas Gerais, direto das terras altas da mantiqueira para a sua casa, em qualquer lugar do país. Nossa kombucha viaja com todo cuidado para chegar cheia de vida e energia até você.
           </p>
         </div>
 
@@ -28,12 +28,12 @@ export default function Distribution() {
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl text-center hover:bg-white/10 transition-colors">
             <Truck className="w-10 h-10 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-bold font-display text-white mb-2">48h</h3>
-            <p className="text-white/70">Prazo médio de entrega (Sudeste)</p>
+            <p className="text-white/70">Prazo médio de envio (Sudeste)</p>
           </div>
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl text-center hover:bg-white/10 transition-colors">
-            <Store className="w-10 h-10 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold font-display text-white mb-2">50+</h3>
-            <p className="text-white/70">Pontos de venda</p>
+            <Users className="w-10 h-10 text-primary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold font-display text-white mb-2">3500+</h3>
+            <p className="text-white/70">Clientes satisfeitos</p>
           </div>
         </div>
 
@@ -45,9 +45,6 @@ export default function Distribution() {
           <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full">
                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">Seja um Revendedor</a>
-             </Button>
-             <Button asChild size="lg" variant="outline" className="border-foreground text-foreground hover:bg-foreground/5 rounded-full">
-               <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">Encontrar Lojas</a>
              </Button>
           </div>
         </div>

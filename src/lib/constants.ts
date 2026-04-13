@@ -14,8 +14,8 @@ export const NAVIGATION_LINKS = [
 export const HERO_CONTENT = {
   headline: "Vibrando vida e saúde, com amor!",
   subheadline:
-    "Kombucha artesanal mineira, feita com ingredientes naturais e muito carinho. Probióticos vivos para o seu bem-estar diário. Entregamos em todo o Brasil.",
-  ctaPrimary: "Quero escolher meus sabores",
+    "Kombucha mineira pioneira no Brasil, produzida desde 2017 com ingredientes naturais, excelência e muito carinho. Probióticos de montão e inúmeros compostos benéficos para o seu bem-estar diário. Enviamos para todo o Brasil.",
+  ctaPrimary: "Escolher meus sabores",
   ctaSecondary: "Quero assinar o clube",
 };
 
@@ -24,11 +24,11 @@ export const EDUCATION_ITEMS = [
     iconName: "RefreshCw",
     title: "Fermentação Natural",
     description:
-      "Processo artesanal de fermentação que preserva probióticos vivos e enzimas benéficas.",
+      "Processo artesanal de fermentação que preserva probióticos e enzimas benéficas.",
   },
   {
     iconName: "ShieldCheck",
-    title: "Probióticos Vivos",
+    title: "Probióticos",
     description:
       "Microrganismos do bem que auxiliam na saúde intestinal e imunidade.",
   },
@@ -58,10 +58,34 @@ export const PHILOSOPHY_CONTENT = {
 
 export type SubscriptionDuration = "trimestral" | "semestral" | "anual";
 
-export const SUBSCRIPTION_DURATIONS: Array<{ key: SubscriptionDuration; label: string; months: number }> = [
-  { key: "trimestral", label: "Trimestral", months: 3 },
-  { key: "semestral", label: "Semestral", months: 6 },
-  { key: "anual", label: "Anual", months: 12 },
+export const SUBSCRIPTION_DURATIONS: Array<{ 
+  key: SubscriptionDuration; 
+  label: string; 
+  months: number; 
+  bonusTitle?: string; 
+  bonusText?: string; 
+  isPopular?: boolean 
+}> = [
+  { 
+    key: "trimestral", 
+    label: "Trimestral", 
+    months: 3 
+  },
+  { 
+    key: "semestral", 
+    label: "Semestral", 
+    months: 6,
+    bonusTitle: "🎁 Kit Boas-Vindas Om",
+    bonusText: "Ganha 1 Bolsa Térmica Om Exclusiva + Taça de vidro Personalizada Kombucha Om + brindes surpresas."
+  },
+  { 
+    key: "anual", 
+    label: "Anual", 
+    months: 12,
+    isPopular: true,
+    bonusTitle: "👑 Benefícios do Clube VIP Om",
+    bonusText: "Kit Completo (Bolsa Térmica + Taça) + Vaga de membro na curadoria de novos sabores + Kit Degustação de lançamentos em 1ª mão + Status de Cliente VIP com direito a bônus exclusivos, convites e cupons em festas/eventos apoiados pela Om."
+  },
 ];
 
 export const SUBSCRIPTION_PLANS = [
@@ -134,19 +158,43 @@ export const TESTIMONIALS = [
   {
     name: "Mariana Costa",
     location: "São Paulo, SP",
-    text: "A Kombucha Om mudou minha rotina! Troquei o refrigerante e me sinto muito melhor. O sabor de maracujá é viciante!",
+    text: "Confesso que tinha preconceito com o sabor avinagrado de outras marcas. Mas a de maracujá da Om é surreal de boa! Sinto meu intestino muito mais leve depois que comecei a tomar.",
     rating: 5,
   },
   {
-    name: "Rafael Santos",
-    location: "Curitiba, PR",
-    text: "Parar de beber cerveja nos happy hours e descobrir a kombucha. Meus amigos já estão todos convertidos!",
+    name: "Rafael Barros",
+    location: "São Lourenço, MG",
+    text: "Passei a substituir a cerveja do happy hour de quarta-feira pela Kombucha Om. Meus amigos acharam graça no início, mas hoje quase todo mundo do escritório entrou pro clube de assinaturas.",
     rating: 5,
   },
   {
-    name: "Bela Horizonte, MG",
+    name: "Helena Nogueira",
     location: "Belo Horizonte, MG",
-    text: "Assinante há 6 meses e não troco por nada. A qualidade é impecável e o atendimento é sempre muito carinhoso.",
+    text: "Sou assinante desde o primeiro ano! Além do sabor, a embalagem é impecável. É visível o cuidado artesanal, diferente daquelas marcas muito industriais.",
+    rating: 5,
+  },
+  {
+    name: "Thiago Mendes",
+    location: "Rio de Janeiro, RJ",
+    text: "Sempre pedia pelo delivery quando ia pra serra, fiquei numa felicidade absurda quando vi que enviavam pro RJ inteiro. A de hibisco gelada num sábado de praia é perfeita.",
+    rating: 5,
+  },
+  {
+    name: "Aline Faria",
+    location: "Campinas, SP",
+    text: "A garrafa até já virou decoração aqui em casa depois que a gente bebe! A Kombucha é sempre fresca, super gaseificada e me tira a vontade de comer doce no meio da tarde.",
+    rating: 5,
+  },
+  {
+    name: "Luiz Carlos Silva",
+    location: "Vitória, ES",
+    text: "Custo benefício excelente para um produto com tanta qualidade. Já mandei mensagem no WhatsApp tirando umas dúvidas sobre fermentação e o atendimento foi sensacional, nota dez.",
+    rating: 4, // 4 stars for realism
+  },
+  {
+    name: "Camila Ribeiro",
+    location: "Uberlândia, MG",
+    text: "Recomendação da minha nutri pra imunidade, e foi a melhor coisa. Sabor suave, nada agressivo no paladar. Tem sido minha rotina matinal energética!",
     rating: 5,
   },
 ];

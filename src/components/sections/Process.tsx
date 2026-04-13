@@ -1,6 +1,6 @@
 
 import { PROCESS_STEPS } from "@/lib/constants";
-import processImg from "@/assets/infographic-what-is.png"; // Usar como placeholder se não tiver img específica de processo
+import processImg from "@/assets/process-image.jpg";
 
 export default function Process() {
   return (
@@ -37,11 +37,11 @@ export default function Process() {
 
           <div className="relative">
              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted aspect-[4/5]">
-               {/* Usando uma imagem genérica de processo ou a imagem de 'o que é' como placeholder visual */}
-                <div className="absolute inset-0 bg-neutral-200 flex items-center justify-center">
-                   <p className="text-muted-foreground">Imagem do Processo de Produção / Fermentação</p>
-                   {/* Em produção real, substituiria por uma foto real da fábrica/tanques */}
-                </div>
+                <img 
+                  src={processImg} 
+                  alt="Kombucha Om - Ingredientes Reais" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block animate-bounce-slow">
                   <p className="font-display font-bold text-primary text-4xl mb-1">100%</p>
                   <p className="text-sm font-medium text-foreground">Artesanal e Natural</p>

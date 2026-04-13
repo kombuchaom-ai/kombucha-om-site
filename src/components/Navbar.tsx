@@ -31,8 +31,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center gap-2 group">
+        <a href="/#" className="flex items-center gap-2 group">
             <div
               className={cn(
                 "relative w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-full transition-transform group-hover:scale-105",
@@ -51,19 +50,16 @@ export default function Navbar() {
               {BRAND_NAME}
             </span>
           </a>
-        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {NAVIGATION_LINKS.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                isScrolled ? "text-foreground" : "text-white/90 hover:text-white"
-              )}>
-                {link.label}
-              </a>
-            </Link>
+            <a key={link.href} href={link.href} className={cn(
+              "text-sm font-medium transition-colors hover:text-primary",
+              isScrolled ? "text-foreground" : "text-white/90 hover:text-white"
+            )}>
+              {link.label}
+            </a>
           ))}
         </nav>
 
@@ -96,14 +92,14 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-background border-b border-border p-4 shadow-lg md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
           {NAVIGATION_LINKS.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a 
-                className="text-lg font-medium py-2 px-4 hover:bg-muted rounded-md"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            </Link>
+            <a 
+              key={link.href} 
+              href={link.href}
+              className="text-lg font-medium py-2 px-4 hover:bg-muted rounded-md"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </a>
           ))}
           <div className="h-px bg-border my-2" />
           <Button asChild className="w-full rounded-full" onClick={() => setMobileMenuOpen(false)}>

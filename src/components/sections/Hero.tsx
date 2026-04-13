@@ -24,10 +24,10 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
               <Button asChild size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">{HERO_CONTENT.ctaPrimary}</a>
+                <a href="#produtos">{HERO_CONTENT.ctaPrimary}</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full text-lg px-8 hover:bg-white/50">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">{HERO_CONTENT.ctaSecondary}</a>
+                <a href="#assinatura">{HERO_CONTENT.ctaSecondary}</a>
               </Button>
             </div>
           </div>

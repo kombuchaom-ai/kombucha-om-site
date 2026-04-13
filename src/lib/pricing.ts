@@ -9,6 +9,16 @@ export function formatBRL(value: number) {
   }).format(value);
 }
 
+export function formatBRLPrecise(value: number) {
+  // Com os centavos exibidos perfeitamente
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
 export function calcSubscriptionTotal(baseMonthlyFromImage: number, months: number) {
   // Regra final confirmada pelo cliente:
   // - o valor exibido na arte já é o PREÇO MENSAL

@@ -13,13 +13,15 @@ export default function CTAFinal() {
         <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto opacity-90">
           Junte-se a milhares de pessoas que já transformaram seus hábitos. Assine nosso clube ou peça seu kit degustação agora.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-white/90 text-lg px-10 h-14 shadow-xl">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">Ver Produtos</a>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full border-2 border-white text-white hover:bg-white/10 text-lg px-10 h-14">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">Assinar Clube</a>
-          </Button>
+        <div className="flex justify-center mt-4">
+          <div className="relative inline-flex group">
+            {/* Efeito Glow Pulsante Oculto Atrás do Botão */}
+            <div className="absolute transition-all duration-1000 opacity-60 -inset-2 bg-white rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-3 animate-pulse"></div>
+            
+            <Button asChild size="lg" className="relative rounded-full bg-white text-primary hover:bg-white/95 text-lg font-bold px-12 h-16 shadow-2xl hover:scale-105 transition-transform duration-300">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">FALE CONOSCO</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
