@@ -36,7 +36,7 @@ export const EDUCATION_ITEMS = [
     iconName: "Leaf",
     title: "Ingredientes Reais",
     description:
-      "Frutas, chás selecionados e açúcar orgânico. Sem conservantes ou aditivos.",
+      "Frutas, flores, raízes, chás selecionados e açúcar orgânico. Sem letras miúdas e ingredientes difíceis de pronunciar, sem conservantes ou aditivos. 100% natural e de origem vegetal.",
   },
   {
     iconName: "Zap",

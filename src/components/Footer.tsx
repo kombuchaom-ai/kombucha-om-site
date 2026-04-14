@@ -56,7 +56,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/70 text-sm">
                 <Mail className="w-5 h-5 shrink-0 text-primary" />
-                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Falar no WhatsApp</a>
+                <a href="mailto:kombuchaom@gmail.com" className="hover:text-white transition-colors">kombuchaom@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 text-white/70 text-sm">
                 <Phone className="w-5 h-5 shrink-0 text-primary" />

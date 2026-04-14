@@ -7,7 +7,6 @@ import { Star } from "lucide-react";
 import { calcSubscriptionTotal, formatBRL, formatBRLPrecise } from "@/lib/pricing";
 import { cn } from "@/lib/utils";
 
-import overviewImg from "@/assets/plans-overview.png";
 import planEssencial from "@/assets/plan-essencial.png";
 import planEquilibrio from "@/assets/plan-equilibrio.png";
 import planFamilia from "@/assets/plan-familia.png";
@@ -43,17 +42,6 @@ export default function Subscription() {
           </p>
         </div>
 
-        {/* Arte resumo (ajuda entendimento) */}
-        <div className="max-w-4xl mx-auto mb-14">
-          <div className="rounded-3xl overflow-hidden shadow-2xl border border-border bg-white">
-            <img
-              src={overviewImg}
-              alt="Planos de assinatura Kombucha Om"
-              className="w-full h-auto object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
 
         <Tabs value={durationKey} onValueChange={(v) => setDurationKey(v as any)} className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-3 mb-10">

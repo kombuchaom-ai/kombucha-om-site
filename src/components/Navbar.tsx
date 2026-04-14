@@ -34,9 +34,6 @@ export default function Navbar() {
           <div
             className={cn(
               "relative w-14 h-14 md:w-16 md:h-16 transition-transform group-hover:scale-105",
-              isScrolled
-                ? "ring-1 ring-border shadow-sm"
-                : "ring-1 ring-white/30",
             )}
           >
             <img
@@ -65,7 +62,7 @@ export default function Navbar() {
                 "text-sm font-medium transition-colors hover:text-primary",
                 isScrolled
                   ? "text-foreground"
-                  : "text-white/90 hover:text-white",
+                  : "text-foreground md:text-white/90 hover:text-white",
               )}
             >
               {link.label}

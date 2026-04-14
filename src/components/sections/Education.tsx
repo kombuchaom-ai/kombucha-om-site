@@ -18,8 +18,7 @@ export default function Education() {
             O que é Kombucha?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Uma bebida fermentada, naturalmente gaseificada e cheia de vida.
-            Conheça os pilares que fazem da Kombucha Om um elixir de bem-estar.
+            É uma bebida fermentada milenar a base de chá (Camellia Sinensis) e uma cultura simbiótica de leveduras e bactérias benéficas, naturalmente gaseificada, saborosa e cheia de vida. Conheça os pilares que fazem da Kombucha Om um elixir de bem-estar.
           </p>
         </div>
 
