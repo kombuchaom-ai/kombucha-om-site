@@ -11,6 +11,7 @@ import planEssencial from "@/assets/plan-essencial.png";
 import planEquilibrio from "@/assets/plan-equilibrio.png";
 import planFamilia from "@/assets/plan-familia.png";
 import planIntensivo from "@/assets/plan-intensivo.png";
+import plansOverview from "@/assets/plans-overview.png";
 
 const planImageMap: Record<string, string> = {
   "plan-essencial": planEssencial,
@@ -87,7 +88,7 @@ export default function Subscription() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {SUBSCRIPTION_PLANS.map((plan) => {
                   const total = calcSubscriptionTotal(plan.baseMonthlyFromImage, d.months);
-                  const img = planImageMap[plan.imageKey] ?? overviewImg;
+                  const img = planImageMap[plan.imageKey] ?? plansOverview;
                   
                   // Lógica de Desconto e Preço Unitário
                   const retailPrice = 30; // Preço fora do clube R$ 30,00
