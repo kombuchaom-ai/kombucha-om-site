@@ -3,8 +3,13 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "wouter";
 import { BRAND_NAME, BRAND_TAGLINE, FOOTER_LINKS, WHATSAPP_LINK } from "@/lib/constants";
 import logo from "@/assets/logo.png";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Footer() {
+  const [openDialog, setOpenDialog] = useState<"privacidade" | "termos" | null>(null);
+
   return (
     <footer className="bg-foreground text-background pt-16 pb-8" id="footer">
       <div className="container mx-auto px-4 md:px-6">
@@ -87,8 +92,117 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <p>© {new Date().getFullYear()} {BRAND_NAME}. Todos os direitos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-            <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+            <Dialog open={openDialog === "termos"} onOpenChange={(open) => setOpenDialog(open ? "termos" : null)}>
+              <DialogTrigger asChild>
+                <button className="hover:text-white transition-colors text-xs">Termos de Uso</button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle>Termos de Uso</DialogTitle>
+                </DialogHeader>
+                <div className="text-sm text-muted-foreground space-y-4 mt-4">
+                  <h3 className="font-bold text-foreground">1. Aceitação dos Termos</h3>
+                  <p>Ao acessar e usar o site da {BRAND_NAME}, você aceita e concorda em cumprir estes Termos de Uso. Se você não concordar com qualquer parte destes termos, por favor, não utilize nosso site.</p>
+
+                  <h3 className="font-bold text-foreground">2. Uso do Site</h3>
+                  <p>Você concorda em usar este site apenas para fins legais e de maneira que não infrinja os direitos de outros usuários. Você não deve usar este site de qualquer forma que cause, ou possa causar, danos ao site ou prejuízo em termos de disponibilidade ou acessibilidade.</p>
+
+                  <h3 className="font-bold text-foreground">3. Produtos e Serviços</h3>
+                  <p>As informações sobre nossos produtos e serviços são fornecidas de boa fé e para fins informativos. A {BRAND_NAME} se reserva o direito de modificar preços, disponibilidade e especificações dos produtos a qualquer momento, sem aviso prévio.</p>
+
+                  <h3 className="font-bold text-foreground">4. Pedidos e Pagamentos</h3>
+                  <p>Todos os pedidos estão sujeitos à disponibilidade dos produtos. Os preços são exibidos em Reais (R$) e incluem impostos aplicáveis. O pagamento deve ser efetuado conforme as opções disponíveis no ato da compra.</p>
+
+                  <h3 className="font-bold text-foreground">5. Propriedade Intelectual</h3>
+                  <p>Todo o conteúdo deste site, incluindo textos, imagens, logotipos, marcas registradas e materiais, é de propriedade da {BRAND_NAME} ou de seus licenciadores e está protegido pelas leis de propriedade intelectual.</p>
+
+                  <h3 className="font-bold text-foreground">6. Limitação de Responsabilidade</h3>
+                  <p>A {BRAND_NAME} não será responsável por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou incapacidade de usar este site ou seus produtos.</p>
+
+                  <h3 className="font-bold text-foreground">7. Modificações dos Termos</h3>
+                  <p>Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. As alterações entrarão em vigor imediatamente após sua publicação no site.</p>
+
+                  <h3 className="font-bold text-foreground">8. Contato</h3>
+                  <p>Para dúvidas sobre estes Termos de Uso, entre em contato conosco através do e-mail kombuchaom@gmail.com ou WhatsApp (35) 91586-6167.</p>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <Button onClick={() => setOpenDialog(null)}>Fechar</Button>
+                </div>
+              </DialogContent>
+            </Dialog>
+
+            <Dialog open={openDialog === "privacidade"} onOpenChange={(open) => setOpenDialog(open ? "privacidade" : null)}>
+              <DialogTrigger asChild>
+                <button className="hover:text-white transition-colors text-xs">Política de Privacidade</button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle>Política de Privacidade</DialogTitle>
+                </DialogHeader>
+                <div className="text-sm text-muted-foreground space-y-4 mt-4">
+                  <h3 className="font-bold text-foreground">1. Introdução</h3>
+                  <p>A {BRAND_NAME} está comprometida em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações pessoais quando você visita nosso site ou faz compras.</p>
+
+                  <h3 className="font-bold text-foreground">2. Informações que Coletamos</h3>
+                  <p>Podemos coletar as seguintes informações pessoais:</p>
+                  <ul className="list-disc list-inside ml-4 space-y-1">
+                    <li>Nome, endereço, e-mail e telefone quando você faz um pedido</li>
+                    <li>Informações de pagamento processadas de forma segura</li>
+                    <li>Dados de navegação através de cookies e tecnologias similares</li>
+                  </ul>
+
+                  <h3 className="font-bold text-foreground">3. Como Usamos suas Informações</h3>
+                  <p>Usamos suas informações para:</p>
+                  <ul className="list-disc list-inside ml-4 space-y-1">
+                    <li>Processar e entregar seus pedidos</li>
+                    <li>Comunicar-se sobre pedidos, produtos e promoções</li>
+                    <li>Melhorar nossos produtos e serviços</li>
+                    <li>Cumprir obrigações legais e fiscais</li>
+                  </ul>
+
+                  <h3 className="font-bold text-foreground">4. Compartilhamento de Informações</h3>
+                  <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto quando necessário para:</p>
+                  <ul className="list-disc list-inside ml-4 space-y-1">
+                    <li>Processar pagamentos e entregas</li>
+                    <li>Cumprir exigências legais</li>
+                    <li>Proteger nossos direitos e propriedade</li>
+                  </ul>
+
+                  <h3 className="font-bold text-foreground">5. Cookies</h3>
+                  <p>Utilizamos cookies para melhorar sua experiência de navegação, analisar o tráfego do site e personalizar conteúdo. Você pode configurar seu navegador para recusar cookies, mas isso pode limitar sua capacidade de usar certas funcionalidades do site.</p>
+
+                  <h3 className="font-bold text-foreground">6. Segurança</h3>
+                  <p>Implementamos medidas de segurança adequadas para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição. No entanto, nenhum método de transmissão pela internet é 100% seguro.</p>
+
+                  <h3 className="font-bold text-foreground">7. Seus Direitos</h3>
+                  <p>Você tem o direito de:</p>
+                  <ul className="list-disc list-inside ml-4 space-y-1">
+                    <li>Acessar suas informações pessoais</li>
+                    <li>Corrigir dados incorretos</li>
+                    <li>Solicitar a exclusão de seus dados</li>
+                    <li>Opor-se ao processamento de seus dados</li>
+                    <li>Solicitar a portabilidade de dados</li>
+                  </ul>
+
+                  <h3 className="font-bold text-foreground">8. Retenção de Dados</h3>
+                  <p>Mantemos suas informações pessoais apenas pelo tempo necessário para cumprir os propósitos descritos nesta política ou conforme exigido por lei.</p>
+
+                  <h3 className="font-bold text-foreground">9. Alterações nesta Política</h3>
+                  <p>Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos sobre mudanças significativas através do site ou por e-mail.</p>
+
+                  <h3 className="font-bold text-foreground">10. Contato</h3>
+                  <p>Para questões sobre esta Política de Privacidade ou para exercer seus direitos, entre em contato:</p>
+                  <ul className="list-disc list-inside ml-4 space-y-1">
+                    <li>E-mail: kombuchaom@gmail.com</li>
+                    <li>WhatsApp: (35) 91586-6167</li>
+                    <li>Endereço: Soledade de Minas, MG - Serra da Mantiqueira</li>
+                  </ul>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <Button onClick={() => setOpenDialog(null)}>Fechar</Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
