@@ -45,7 +45,7 @@ export default function Subscription() {
 
 
         <Tabs value={durationKey} onValueChange={(v) => setDurationKey(v as any)} className="max-w-6xl mx-auto">
-          <div className="flex flex-col items-center gap-3 mb-10">
+          <div className="flex flex-col items-center gap-4 md:gap-6 mb-10">
             <TabsList className="bg-white shadow-md border border-border rounded-full p-1 h-auto flex flex-wrap justify-center">
               {SUBSCRIPTION_DURATIONS.map((d) => (
                 <TabsTrigger
@@ -58,12 +58,12 @@ export default function Subscription() {
                 </TabsTrigger>
               ))}
             </TabsList>
-            
-            <p className="text-xs md:text-sm text-muted-foreground text-center px-4 leading-relaxed">
+
+            <p className="text-xs md:text-sm text-muted-foreground text-center px-4 leading-relaxed py-2">
               Valores calculados conforme regra: preço mensal da arte × {duration.months} meses.
             </p>
 
-            <div className="h-32 flex items-center justify-center w-full max-w-3xl">
+            <div className="h-36 md:h-32 flex items-center justify-center w-full max-w-3xl">
               {duration.bonusTitle ? (
                 <div className="bg-primary/5 hover:bg-primary/10 border-2 border-primary/20 rounded-2xl p-4 md:p-6 text-center animate-in zoom-in-95 duration-500 shadow-xl shadow-primary/5 transition-colors">
                   <h4 className="font-display font-bold text-primary text-xl md:text-2xl mb-2 flex items-center justify-center gap-2">
