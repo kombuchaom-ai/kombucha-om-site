@@ -59,7 +59,7 @@ export default function Subscription() {
               ))}
             </TabsList>
             
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs md:text-sm text-muted-foreground text-center px-4 leading-relaxed">
               Valores calculados conforme regra: preço mensal da arte × {duration.months} meses.
             </p>
 
