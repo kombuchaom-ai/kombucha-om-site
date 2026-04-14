@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { HERO_CONTENT, WHATSAPP_LINK } from "@/lib/constants";
 import heroImg from "@/assets/hero-collage.png";
@@ -23,20 +22,29 @@ export default function Hero() {
               {HERO_CONTENT.subheadline}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-              <Button asChild size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full text-lg px-8 shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
+              >
                 <a href="#produtos">{HERO_CONTENT.ctaPrimary}</a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full text-lg px-8 hover:bg-white/50">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full text-lg px-8 hover:bg-white/50"
+              >
                 <a href="#assinatura">{HERO_CONTENT.ctaSecondary}</a>
               </Button>
             </div>
           </div>
-          
-          <div className="relative animate-in slide-in-from-right duration-700 delay-200">
+
+          <div className="relative animate-in slide-in-from-right duration-700 delay-200 pt-6">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
-              <img 
-                src={heroImg} 
-                alt="Kombucha Om Garrafa" 
+              <img
+                src={heroImg}
+                alt="Kombucha Om Garrafa"
                 className="w-full h-auto object-cover max-h-[600px]"
               />
             </div>
