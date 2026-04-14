@@ -12,6 +12,7 @@ import planEquilibrio from "@/assets/plan-equilibrio.png";
 import planFamilia from "@/assets/plan-familia.png";
 import planIntensivo from "@/assets/plan-intensivo.png";
 import plansOverview from "@/assets/plans-overview.png";
+import logoClube from "@/assets/brasão Om VIBE Club.png";
 
 const planImageMap: Record<string, string> = {
   "plan-essencial": planEssencial,
@@ -32,9 +33,7 @@ export default function Subscription() {
     <section className="py-24 bg-gradient-to-b from-green-50 to-white" id="assinatura">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-bold mb-4">
-            Clube de Assinantes
-          </span>
+          <img src={logoClube} alt="Clube de Assinantes Om VIBE" className="h-72 md:h-96 mx-auto mb-4 object-contain" />
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
             Assine por 3, 6 ou 12 meses
           </h2>

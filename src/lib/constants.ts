@@ -83,7 +83,7 @@ export const SUBSCRIPTION_DURATIONS: Array<{
     label: "Anual", 
     months: 12,
     isPopular: true,
-    bonusTitle: "👑 Benefícios do Clube VIP Om",
+    bonusTitle: "👑 Benefícios VIP do Om VIBE Club",
     bonusText: "Kit Completo (Bolsa Térmica + Taça) + Vaga de membro na curadoria de novos sabores + Kit Degustação de lançamentos em 1ª mão + Status de Cliente VIP com direito a bônus exclusivos, convites e cupons em festas/eventos apoiados pela Om."
   },
 ];
