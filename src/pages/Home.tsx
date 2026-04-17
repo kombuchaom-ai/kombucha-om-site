@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
 import Education from "@/components/sections/Education";
 import Philosophy from "@/components/sections/Philosophy";
+import Academy from "@/components/sections/Academy";
 import Products from "@/components/sections/Products";
 import Subscription from "@/components/sections/Subscription";
 import Process from "@/components/sections/Process";
@@ -44,6 +45,7 @@ export default function Home({ targetSection }: HomeProps) {
         <Testimonials />
         <Distribution />
         <CTAFinal />
+        <Academy />
       </main>
 
       <Footer />

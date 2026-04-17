@@ -13,7 +13,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -45,51 +45,64 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-kombucha-green: var(--kombucha-green);
+  --color-kombucha-light-green: var(--kombucha-light-green);
+  --color-kombucha-brown: var(--kombucha-brown);
+  --color-kombucha-cream: var(--kombucha-cream);
+  --color-kombucha-yellow: var(--kombucha-yellow);
 }
 
 :root {
   --radius: 1rem;
-  
+
   /* Zen Vibrante Palette */
   /* Background: Off-white Areia quente */
-  --background: oklch(0.98 0.01 90); 
+  --background: oklch(0.98 0.01 90);
   /* Foreground: Verde Escuro Floresta */
   --foreground: oklch(0.25 0.05 145);
 
   /* Card: Branco puro ou levemente creme */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.25 0.05 145);
-  
+
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.25 0.05 145);
-  
+
   /* Primary: Verde Om (Vibrante) */
   --primary: oklch(0.55 0.15 145);
   --primary-foreground: oklch(0.985 0 0);
-  
+
   /* Secondary: Laranja Energia (Cítrico) */
   --secondary: oklch(0.75 0.18 60);
   --secondary-foreground: oklch(0.25 0.05 145);
-  
+
   /* Muted: Tons de pedra/areia */
   --muted: oklch(0.94 0.03 95);
   --muted-foreground: oklch(0.55 0.05 145);
-  
+
   /* Accent: Roxo Açaí (Espiritual) */
-  --accent: oklch(0.95 0.05 145); /* Verde clarinho para hover padrão */
+  --accent: oklch(0.95 0.05 145);
+  /* Verde clarinho para hover padrão */
   --accent-foreground: oklch(0.35 0.10 145);
-  
+
   --destructive: oklch(0.6 0.2 25);
   --border: oklch(0.90 0.02 95);
   --input: oklch(0.90 0.02 95);
-  --ring: oklch(0.55 0.15 145); /* Match primary */
-  
+  --ring: oklch(0.55 0.15 145);
+  /* Match primary */
+
   /* Charts/Colors for product pills */
-  --chart-1: oklch(0.55 0.15 145); /* Verde */
-  --chart-2: oklch(0.75 0.18 60);  /* Laranja */
-  --chart-3: oklch(0.45 0.15 300); /* Roxo */
-  --chart-4: oklch(0.60 0.20 20);  /* Vermelho/Rosa */
-  --chart-5: oklch(0.85 0.15 90);  /* Amarelo */
+  --chart-1: oklch(0.55 0.15 145);
+  /* Verde */
+  --chart-2: oklch(0.75 0.18 60);
+  /* Laranja */
+  --chart-3: oklch(0.45 0.15 300);
+  /* Roxo */
+  --chart-4: oklch(0.60 0.20 20);
+  /* Vermelho/Rosa */
+  --chart-5: oklch(0.85 0.15 90);
+  /* Amarelo */
 
   --sidebar: oklch(0.98 0.01 90);
   --sidebar-foreground: oklch(0.25 0.05 145);
@@ -99,36 +112,45 @@
   --sidebar-accent-foreground: oklch(0.35 0.10 145);
   --sidebar-border: oklch(0.90 0.02 95);
   --sidebar-ring: oklch(0.55 0.15 145);
+
+  /* Academy Course Tokens */
+  --kombucha-green: 120 40% 25%;
+  --kombucha-light-green: 120 30% 85%;
+  --kombucha-brown: 25 40% 40%;
+  --kombucha-cream: 45 35% 92%;
+  --kombucha-yellow: 45 85% 75%;
 }
 
 .dark {
   /* Dark Mode: Místico Noturno */
-  --background: oklch(0.15 0.05 145); /* Verde escuro profundo */
+  --background: oklch(0.15 0.05 145);
+  /* Verde escuro profundo */
   --foreground: oklch(0.98 0.01 90);
 
   --card: oklch(0.20 0.05 145);
   --card-foreground: oklch(0.98 0.01 90);
-  
+
   --popover: oklch(0.20 0.05 145);
   --popover-foreground: oklch(0.98 0.01 90);
-  
-  --primary: oklch(0.65 0.15 145); /* Verde mais claro para contraste */
+
+  --primary: oklch(0.65 0.15 145);
+  /* Verde mais claro para contraste */
   --primary-foreground: oklch(0.15 0.05 145);
-  
+
   --secondary: oklch(0.30 0.05 145);
   --secondary-foreground: oklch(0.98 0.01 90);
-  
+
   --muted: oklch(0.25 0.05 145);
   --muted-foreground: oklch(0.70 0.05 145);
-  
+
   --accent: oklch(0.25 0.05 145);
   --accent-foreground: oklch(0.98 0.01 90);
-  
+
   --destructive: oklch(0.6 0.2 25);
   --border: oklch(0.30 0.05 145);
   --input: oklch(0.30 0.05 145);
   --ring: oklch(0.55 0.15 145);
-  
+
   --sidebar: oklch(0.15 0.05 145);
   --sidebar-foreground: oklch(0.98 0.01 90);
   --sidebar-primary: oklch(0.65 0.15 145);
@@ -143,13 +165,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-background text-foreground font-body antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display font-bold tracking-tight text-foreground;
   }
 }

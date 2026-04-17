@@ -1,0 +1,54 @@
+/* 
+  Academy Course - Scoped CSS
+  These classes map the Lovable-generated Tailwind tokens to actual color values.
+  Scoped within .academy-page to avoid conflicts with the main site.
+*/
+
+.academy-page {
+  --k-green: hsl(120, 40%, 25%);
+  --k-light-green: hsl(120, 30%, 85%);
+  --k-brown: hsl(25, 40%, 40%);
+  --k-cream: hsl(45, 35%, 92%);
+  --k-yellow: hsl(45, 85%, 75%);
+}
+
+/* Text colors */
+.academy-page .text-kombucha-green { color: var(--k-green); }
+.academy-page .text-kombucha-light-green { color: var(--k-light-green); }
+.academy-page .text-kombucha-brown { color: var(--k-brown); }
+.academy-page .text-kombucha-cream { color: var(--k-cream); }
+.academy-page .text-kombucha-yellow { color: var(--k-yellow); }
+
+/* Background colors */
+.academy-page .bg-kombucha-green { background-color: var(--k-green); }
+.academy-page .bg-kombucha-light-green { background-color: var(--k-light-green); }
+.academy-page .bg-kombucha-brown { background-color: var(--k-brown); }
+.academy-page .bg-kombucha-cream { background-color: var(--k-cream); }
+.academy-page .bg-kombucha-yellow { background-color: var(--k-yellow); }
+
+/* Opacity variants */
+.academy-page .bg-kombucha-green\/20 { background-color: hsl(120, 40%, 25%, 0.2); }
+.academy-page .bg-kombucha-green\/10 { background-color: hsl(120, 40%, 25%, 0.1); }
+.academy-page .bg-kombucha-yellow\/20 { background-color: hsl(45, 85%, 75%, 0.2); }
+.academy-page .bg-kombucha-light-green\/20 { background-color: hsl(120, 30%, 85%, 0.2); }
+.academy-page .bg-kombucha-cream\/20 { background-color: hsl(45, 35%, 92%, 0.2); }
+
+/* Border colors */
+.academy-page .border-kombucha-green { border-color: var(--k-green); }
+.academy-page .border-kombucha-green\/20 { border-color: hsl(120, 40%, 25%, 0.2); }
+.academy-page .border-kombucha-green\/30 { border-color: hsl(120, 40%, 25%, 0.3); }
+.academy-page .border-kombucha-yellow { border-color: var(--k-yellow); }
+.academy-page .border-kombucha-yellow\/50 { border-color: hsl(45, 85%, 75%, 0.5); }
+
+/* Button cta variant */
+.academy-page .btn-cta {
+  background-color: var(--k-green);
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.academy-page .btn-cta:hover {
+  background-color: hsl(120, 40%, 20%);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px hsl(120, 40%, 25%, 0.3);
+}

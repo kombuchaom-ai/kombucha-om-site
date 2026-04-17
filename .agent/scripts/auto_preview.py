@@ -42,11 +42,12 @@ def get_start_command(root):
         data = json.load(f)
     
     scripts = data.get("scripts", {})
+    cmd = None
     if "dev" in scripts:
-        return ["npm", "run", "dev"]
+        cmd = ["npm", "run", "dev"]
     elif "start" in scripts:
-        return ["npm", "start"]
-    return None
+        cmd = ["npm", "start"]
+    return cmd, scripts
 
 def start_server(port=3000):
     if PID_FILE.exists():
@@ -59,7 +60,7 @@ def start_server(port=3000):
             pass # Invalid PID file
 
     root = get_project_root()
-    cmd = get_start_command(root)
+    cmd, scripts = get_start_command(root)
     
     if not cmd:
         print("❌ No 'dev' or 'start' script found in package.json")
@@ -69,16 +70,19 @@ def start_server(port=3000):
     env = os.environ.copy()
     env["PORT"] = str(port)
     
-    print(f"🚀 Starting preview on port {port}...")
+    # Join command if shell=True, and add port flag for vite
+    full_cmd = " ".join(cmd)
+    if "vite" in scripts.get("dev", "") or "vite" in scripts.get("start", ""):
+        full_cmd += f" -- --port {port}"
     
     with open(LOG_FILE, "w") as log:
         process = subprocess.Popen(
-            cmd,
+            full_cmd,
             cwd=str(root),
             stdout=log,
             stderr=log,
             env=env,
-            shell=True # Required for npm on windows often, or consistent path handling
+            shell=True
         )
     
     PID_FILE.write_text(str(process.pid))

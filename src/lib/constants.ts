@@ -9,6 +9,7 @@ export const NAVIGATION_LINKS = [
   { label: "Assinatura", href: "/#assinatura" },
   { label: "Filosofia", href: "/#filosofia" },
   { label: "Onde Encontrar", href: "/#distribuicao" },
+  { label: "Academy", href: "/#academy" },
 ];
 
 export const HERO_CONTENT = {
@@ -206,4 +207,5 @@ export const FOOTER_LINKS = [
   { label: "Assinatura", href: "/#assinatura" },
   { label: "Processo", href: "/#processo" },
   { label: "Contato", href: "/#footer" },
+  { label: "Academy", href: "/#academy" },
 ];
